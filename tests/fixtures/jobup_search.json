@@ -1,0 +1,296 @@
+{
+ "start": 0,
+ "rows": 3,
+ "num_pages": 1,
+ "current_page": 1,
+ "documents": [
+  {
+   "_links": {
+    "detail_fr": {
+     "href": "https://www.jobup.ch/fr/emplois/detail/2274fb48-fea5-4d04-9ac0-f93e46629e38/",
+     "templated": false,
+     "methods": [
+      "GET"
+     ]
+    },
+    "detail_en": {
+     "href": "https://www.jobup.ch/en/jobs/detail/2274fb48-fea5-4d04-9ac0-f93e46629e38/",
+     "templated": false,
+     "methods": [
+      "GET"
+     ]
+    }
+   },
+   "categories": [
+    {
+     "lvl_0": 702,
+     "path": "/702/714",
+     "lvl_1": 714
+    }
+   ],
+   "company_visible": true,
+   "age": 0,
+   "regions": [
+    {
+     "lvl_0": 52,
+     "lvl_1": 53,
+     "lvl_2": 0,
+     "path": "/52/53"
+    }
+   ],
+   "slug": "2274fb48-fea5-4d04-9ac0-f93e46629e38-technicien-ne-systemes-reseaux-microsoft-365",
+   "company_slug": "c9643538-3bee-47b6-8867-db3d71ee0532-schenk-suisse-s-a",
+   "tags": [
+    {
+     "type": "employment_type",
+     "value": "1"
+    }
+   ],
+   "job_id": "2274fb48-fea5-4d04-9ac0-f93e46629e38",
+   "datapool_id": "2274fb48-fea5-4d04-9ac0-f93e46629e38",
+   "title": "Technicien·ne Systèmes, Réseaux & Microsoft 365",
+   "preview": "Technicien·ne Systèmes, Réseaux & Microsoft 365 \nEnvie de mettre vos compétences IT au service de projets concrets, au sein d’un environnement ...",
+   "company_name": "Schenk Suisse S.A.",
+   "company_id": "c9643538-3bee-47b6-8867-db3d71ee0532",
+   "education_ids": [],
+   "language_skills": [
+    {
+     "language": "fr",
+     "level": 3
+    }
+   ],
+   "work_experience": [],
+   "publication_date": "2026-10-19T19:03:20+02:00",
+   "initial_publication_date": "2026-10-19T17:03:20+00:00",
+   "place": "Rolle ",
+   "company_logo_file": "https://media.jobs.ch/media/98c1b563-626c-4a28-b87e-84fda1cb7b29",
+   "company_segmentation": "gu",
+   "employment_position_ids": [
+    3
+   ],
+   "employment_grades": [
+    100
+   ],
+   "employment_type_ids": [
+    "1"
+   ],
+   "benefit_ids": [],
+   "offer_id": 7,
+   "is_active": true,
+   "metadata": [],
+   "coordinates": {
+    "lat": 46.45884,
+    "lon": 6.33965
+   },
+   "is_paid": true,
+   "images": [
+    {
+     "context": "logo",
+     "url": "https://media.jobs.ch/media/98c1b563-626c-4a28-b87e-84fda1cb7b29",
+     "updated": "2026-10-19T19:03:20+02:00"
+    },
+    {
+     "context": "background",
+     "url": "https://media.jobs.ch/media/5d95828b-4a88-4914-b865-e005f71f2e86",
+     "updated": "2026-10-19T19:03:20+02:00"
+    }
+   ],
+   "layout_type": "STANDARD",
+   "listing_tags": [
+    {
+     "name": "quickApply"
+    }
+   ]
+  },
+  {
+   "_links": {
+    "detail_fr": {
+     "href": "https://www.jobup.ch/fr/emplois/detail/208f5a56-500c-44a4-a0ed-92f61d27f743/",
+     "templated": false,
+     "methods": [
+      "GET"
+     ]
+    },
+    "detail_en": {
+     "href": "https://www.jobup.ch/en/jobs/detail/208f5a56-500c-44a4-a0ed-92f61d27f743/",
+     "templated": false,
+     "methods": [
+      "GET"
+     ]
+    }
+   },
+   "categories": [
+    {
+     "lvl_0": 702,
+     "path": "/702/708",
+     "lvl_1": 708
+    }
+   ],
+   "company_visible": true,
+   "age": 0,
+   "regions": [
+    {
+     "lvl_0": 52,
+     "lvl_1": 56,
+     "lvl_2": 0,
+     "path": "/52/56"
+    }
+   ],
+   "slug": "208f5a56-500c-44a4-a0ed-92f61d27f743-web-applications-java-developer-h-f",
+   "company_slug": "47b607a3-017d-4db9-9d2e-947bd4b7b78e-utopix-sarl",
+   "tags": [],
+   "job_id": "208f5a56-500c-44a4-a0ed-92f61d27f743",
+   "datapool_id": "208f5a56-500c-44a4-a0ed-92f61d27f743",
+   "title": "Web Applications Java Developer (H/F)",
+   "preview": "Web Applications Java Developer (H/F) \nNous sommes une société à taille humaine spécialisée depuis plus de 30 ans dans la conception et le ...",
+   "company_name": "Utopix Sàrl",
+   "company_id": "47b607a3-017d-4db9-9d2e-947bd4b7b78e",
+   "education_ids": [],
+   "language_skills": [
+    {
+     "language": "fr",
+     "level": 1
+    }
+   ],
+   "work_experience": [],
+   "publication_date": "2026-10-19T18:28:11+02:00",
+   "initial_publication_date": "2026-10-19T16:28:11+00:00",
+   "place": "Montreux",
+   "company_logo_file": "https://media.jobs.ch/media/27245774-3e06-4e8b-94d0-4f73297035ab",
+   "company_segmentation": "kmu",
+   "employment_position_ids": [
+    3
+   ],
+   "employment_grades": [
+    100
+   ],
+   "employment_type_ids": [
+    "5"
+   ],
+   "benefit_ids": [],
+   "offer_id": 6,
+   "is_active": true,
+   "metadata": [],
+   "coordinates": {
+    "lat": 46.44050895,
+    "lon": 6.90396052571234
+   },
+   "is_paid": true,
+   "images": [
+    {
+     "context": "logo",
+     "url": "https://media.jobs.ch/media/27245774-3e06-4e8b-94d0-4f73297035ab",
+     "updated": "2026-10-19T18:28:12+02:00"
+    }
+   ],
+   "layout_type": "STANDARD",
+   "listing_tags": [
+    {
+     "name": "quickApply"
+    }
+   ]
+  },
+  {
+   "_links": {
+    "detail_fr": {
+     "href": "https://www.jobup.ch/fr/emplois/detail/f596a0e5-c5c3-4946-a778-47c574330dc8/",
+     "templated": false,
+     "methods": [
+      "GET"
+     ]
+    },
+    "detail_en": {
+     "href": "https://www.jobup.ch/en/jobs/detail/f596a0e5-c5c3-4946-a778-47c574330dc8/",
+     "templated": false,
+     "methods": [
+      "GET"
+     ]
+    }
+   },
+   "categories": [
+    {
+     "lvl_0": 702,
+     "path": "/702/715",
+     "lvl_1": 715
+    }
+   ],
+   "company_visible": true,
+   "age": 0,
+   "regions": [
+    {
+     "lvl_0": 34,
+     "lvl_1": 37,
+     "lvl_2": 0,
+     "path": "/34/37"
+    }
+   ],
+   "slug": "f596a0e5-c5c3-4946-a778-47c574330dc8-technicien-support-it-mission-de-3-mois-a-100",
+   "company_slug": "943ebff3-425d-4b76-9da7-1beca7c50082-specitec-sa",
+   "tags": [
+    {
+     "type": "employment_type",
+     "value": "1"
+    }
+   ],
+   "job_id": "f596a0e5-c5c3-4946-a778-47c574330dc8",
+   "datapool_id": "f596a0e5-c5c3-4946-a778-47c574330dc8",
+   "title": "Technicien support IT - Mission de 3 mois à 100%",
+   "preview": "Technicien support IT - Mission de 3 mois à 100% \nDescription de l’offre \nPour le compte de notre client, une entreprise suisse active dans le ...",
+   "company_name": "SpeciTec SA",
+   "company_id": "943ebff3-425d-4b76-9da7-1beca7c50082",
+   "education_ids": [],
+   "language_skills": [
+    {
+     "language": "en",
+     "level": 3
+    },
+    {
+     "language": "fr",
+     "level": 3
+    }
+   ],
+   "work_experience": [],
+   "publication_date": "2026-10-19T17:08:09+02:00",
+   "initial_publication_date": "2026-10-19T15:08:09+00:00",
+   "place": "Genève",
+   "company_logo_file": "https://media.jobs.ch/media/7cb49f90-4ecc-4122-91ff-7c5ad2b0e0f5",
+   "company_segmentation": "pdl",
+   "employment_position_ids": [
+    3
+   ],
+   "employment_grades": [
+    100
+   ],
+   "employment_type_ids": [
+    "1"
+   ],
+   "benefit_ids": [],
+   "offer_id": 7,
+   "is_active": true,
+   "metadata": [],
+   "coordinates": {
+    "lat": 46.20224,
+    "lon": 6.149
+   },
+   "is_paid": true,
+   "images": [
+    {
+     "context": "logo",
+     "url": "https://media.jobs.ch/media/7cb49f90-4ecc-4122-91ff-7c5ad2b0e0f5",
+     "updated": "2026-10-19T17:08:11+02:00"
+    },
+    {
+     "context": "background",
+     "url": "https://media.jobs.ch/media/cd4f18a8-9aa3-49e9-b0b1-86e3d71aeecd",
+     "updated": "2026-10-19T17:08:11+02:00"
+    }
+   ],
+   "layout_type": "STANDARD"
+  }
+ ],
+ "total_hits": 693,
+ "hash": "e1a3c87ad2c18d56569c3024ed1ae072",
+ "metadata": {
+  "search_geo_shapes": []
+ }
+}

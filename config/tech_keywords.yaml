@@ -1,0 +1,68 @@
+# Tech filter (§6.2) for backend development and AI engineering roles (D16).
+# Patterns are Python regexes matched against accent-folded, lowercased text
+# ("Développeur" → "developpeur", "Zürich" → "zurich").
+
+# A title matching any of these is kept (unless denied below).
+title_allow:
+  - '\bback[- ]?end\b'
+  - '\bfull[- ]?stack\b'
+  - '\b(software|application|api|python|java|golang|go|kotlin|scala|rust|c\+\+|c#|\.net|node(\.js)?|php|ruby|django|spring)\b.{0,30}\b(engineer|developer|entwickler\w*|ingenieur\w*|programmer|programmierer\w*|developpeur\w*|ingenieure?|architect|architekt\w*)'
+  - '\b(software|applikations|anwendungs|backend|java|python|\.net|c#)[- ]?(entwickler\w*|ingenieur\w*|engineer\w*|developer|architekt\w*)'
+  - '\bsoftwareentwickler\w*|\bsoftware-entwickler\w*|\bapplikationsentwickler\w*|\bsoftwareingenieur\w*'
+  - '\bdeveloppeur\w*\s+(logiciel|back|full|java|python|\.net|php|web)'
+  - '\bingenieur\w*\s+(logiciel|software|developpement)'
+  - '\b(ai|ki|ia|ml|llm|genai|gen ai|machine learning|deep learning|nlp|computer vision|mlops)\b.{0,30}\b(engineer\w*|developer|entwickler\w*|ingenieur\w*|scientist|researcher|architect|specialist|spezialist\w*)'
+  - '\b(artificial intelligence|kunstliche intelligenz|intelligence artificielle|machine learning|maschinelles lernen|llm|generative ai)\b'
+  - '\b(prompt|agent\w*|rag)\s+engineer'
+  - '\bsite reliability|\bsre\b'
+
+# Generic engineering role words: such titles need description evidence.
+title_role:
+  - '\b(engineer\w*|developer\w*|entwickler\w*|programmier\w*|programmer|ingenieur\w*|informatiker\w*|developpeur\w*|architect\w*|architekt\w*|specialist|spezialist\w*|consultant)\b'
+
+# Backend / AI technology terms counted in description + source tags.
+description_min_terms: 3
+description_terms:
+  - '\bpython\b'
+  - '\bjava\b(?!script)'
+  - '\bkotlin\b'
+  - '\bgolang\b|\bgo\b(?= (?:lang|developer|engineer|services))'
+  - '\brust\b'
+  - '\bscala\b'
+  - '\bc#|\.net\b|\basp\.net\b'
+  - '\bnode(\.js|js)?\b'
+  - '\bphp\b|\blaravel\b|\bsymfony\b'
+  - '\bruby\b|\brails\b'
+  - '\bspring( boot)?\b'
+  - '\bdjango\b|\bfastapi\b|\bflask\b'
+  - '\bmicroservice\w*|\bmicro-service\w*'
+  - '\brest(ful)? ?api\w*|\bgraphql\b|\bgrpc\b'
+  - '\bpostgres\w*|\bmysql\b|\bmongodb\b|\bredis\b|\bsql\b'
+  - '\bkafka\b|\brabbitmq\b'
+  - '\bdocker\b|\bkubernetes\b|\bk8s\b'
+  - '\bbackend\b|\bback-end\b'
+  - '\bllm\w*|\bgenai\b|\bgenerative ai\b|\brag\b|\blangchain\b|\bopenai\b|\bhugging ?face\b'
+  - '\bpytorch\b|\btensorflow\b|\bscikit|\bkeras\b|\bmlops\b'
+  - '\bmachine learning\b|\bdeep learning\b|\bnlp\b'
+
+# Titles matching these are rejected...
+title_deny:
+  - '\b(sales|vertrieb\w*|verkauf\w*|vente|account manager|key account|business development)\b'
+  - '\b(recruit\w*|recruiter|talent acquisition|personalberat\w*|hr )\b'
+  - '\b(support|helpdesk|help desk|service desk|1st level|2nd level|first level|second level)\b'
+  - '\b(sap|abap|salesforce|dynamics 365|servicenow)\b'
+  - '\b(system ?administrator|systemadministrator\w*|sysadmin|administrateur systeme|systemtechniker\w*|netzwerk\w*|network engineer|ict-fachmann|workplace)\b'
+  - '\b(front[- ]?end|frontend|ui developer|ux|designer|webdesign\w*)\b'
+  - '\b(lehrstelle|lernende\w*|apprenti\w*|lehre als|efz)\b'
+  - '\b(tester|test engineer|qa engineer|testautomatis\w*|quality assurance)\b'
+  - '\b(elektro\w*|electrical|mechani\w*|konstrukt\w*|hardware|fpga|embedded|automation engineer|automatisierung\w*|plc|sps)\b'
+  - '\b(business analyst|product owner|scrum master|project manager|projektleiter\w*|chef de projet)\b'
+
+# ...unless one of these also matches (e.g. "Fullstack (Frontend/Backend)").
+title_deny_unless:
+  - '\bback[- ]?end\b'
+  - '\bfull[- ]?stack\b'
+  - '\b(ai|ml|llm|machine learning)\b.{0,20}\bengineer'
+
+# Recruitment agencies (open question Q3): list company patterns to exclude.
+company_deny: []

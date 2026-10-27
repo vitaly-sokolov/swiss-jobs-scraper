@@ -1,0 +1,124 @@
+{
+ "publication_end_date": "2026-12-03",
+ "_links": {
+  "detail_de": {
+   "href": "https://www.jobs.ch/de/stellenangebote/detail/e1051fdb-d899-4dd3-82b9-6a6c2dac5e57/",
+   "templated": false,
+   "methods": [
+    "GET"
+   ]
+  },
+  "detail_fr": {
+   "href": "https://www.jobs.ch/fr/offres-emplois/detail/e1051fdb-d899-4dd3-82b9-6a6c2dac5e57/",
+   "templated": false,
+   "methods": [
+    "GET"
+   ]
+  },
+  "detail_en": {
+   "href": "https://www.jobs.ch/en/vacancies/detail/e1051fdb-d899-4dd3-82b9-6a6c2dac5e57/",
+   "templated": false,
+   "methods": [
+    "GET"
+   ]
+  }
+ },
+ "categories": [
+  {
+   "lvl_0": 106,
+   "path": "/98/106/171",
+   "lvl_1": 171
+  },
+  {
+   "lvl_0": 106,
+   "path": "/98/106/179",
+   "lvl_1": 179
+  }
+ ],
+ "company_visible": true,
+ "regions": [
+  {
+   "lvl_0": 2,
+   "lvl_1": 7,
+   "lvl_2": 19,
+   "path": "/2/7/19"
+  }
+ ],
+ "slug": "e1051fdb-d899-4dd3-82b9-6a6c2dac5e57-data-platform-engineer",
+ "company_slug": "2004-schweizerische-nationalbank",
+ "application_method": "application_url",
+ "job_source_type": "template",
+ "last_online_date": "2026-10-18",
+ "job_id": "e1051fdb-d899-4dd3-82b9-6a6c2dac5e57",
+ "datapool_id": "e1051fdb-d899-4dd3-82b9-6a6c2dac5e57",
+ "title": "Data Platform Engineer",
+ "company_name": "Schweizerische Nationalbank",
+ "company_id": "2004",
+ "industry_id": "1",
+ "education_ids": [],
+ "language_skills": [],
+ "work_experience": [],
+ "publication_date": "2026-10-19T18:02:04+02:00",
+ "initial_publication_date": "2026-10-19T18:03:37+02:00",
+ "place": "Zürich",
+ "street": "",
+ "employment_position_ids": [
+  3
+ ],
+ "employment_grades": [
+  80,
+  85,
+  90,
+  95,
+  100
+ ],
+ "employment_type_ids": [
+  "5"
+ ],
+ "benefit_ids": [],
+ "external_url": "",
+ "application_url": "https://smahrt-consulting-ag.contactrh.com/jobs/4473/44518098/de_DE",
+ "zipcode": "8022",
+ "synonym": "",
+ "template_profession": "Data Platform Engineer",
+ "template_text": "<h1>Gemeinsam setzen wir uns für die Erfüllung unseres einzigartigen Mandats ein. Ein sinnvoller Job in einem vielfältigen Umfeld.</h1> <h1>Data Platform Engineer</h1> <div> <p>Die Führungseinheit Datenbanken und Speichersysteme in der IT-Infrastruktur stellt zentrale Daten-Plattformen bereit und bildet die Basis für den produktiven und operativen Betrieb der Informatik. Sie setzt moderne Technologien ein um die Verfügbarkeit, Verarbeitung und Bereitstellung von Daten sowie deren Schutz sicherzustellen. Durch konsequente Automatisierung werden operationelle Effizienz, Skalierbarkeit und Nachvollziehbarkeit im Betrieb erhöht. Arbeitsort ist Zürich.</p> <div>  <div>  <div>  <strong>Ihre Aufgaben</strong>  </div>  <div>  <p> </p>  <ul>  <li>Aufbau, Betrieb und Weiterentwicklung von On-Premises Infrastruktur-Plattformen auf Linux Servern und OpenShift;</li>  <li>Aufbau, Integration und Betrieb von Datenplattform-Komponenten auf Basis von Kafka und Elasticsearch;</li>  <li>Automatisierung von Infrastruktur, Konfigurationen und Deployments mit Ansible, Puppet, Python und Bash;</li>  <li>Leisten von Pikettdienst im 2nd-Level.</li>  </ul>  </div>  </div>  <div>  <div>  <strong>Ihr Profil</strong>  </div>  <div>  <p> </p>  <ul>  <li>Abschluss in Informatik, Ingenieurswissenschaft oder ähnlichem Bereich (FH/Uni/ETH);</li>  <li>Fachkenntnisse: Red Hat Linux, OpenShift, Kafka, Elasticsearch, Python, Bash, GitLab</li>  <li>Erfahrung mit Infrastructure as Code, Automatisierung und GitOps-Prinzipien, insbesondere mit ArgoCD, GitLab und Ansible;</li>  <li>Verhandlungssicher auf Deutsch oder Französisch sowie auf Englisch.</li>  </ul>  </div>  </div>  </div> <h3> <strong>Unser Angebot</strong> </h3> <p>Wir bieten Ihnen eine einmalige Gelegenheit, in einer zentralbankspezifischen IT-Umgebung mitzuwirken.<br />Es erwartet Sie ein vielseitiges Aufgabenspektrum, einzigartige Gestaltungsmöglichkeiten sowie die aktive Mitarbeit an zukunftsorientierten und anspruchsvollen IT-Lösungen - von der Anforderung über die Konzeption bis hin zum Betrieb.</p> <p>Dabei übernehmen Sie Verantwortung für Ihre Themen und gestalten Ihre Arbeit in einem hohen Mass an Eigenverantwortung. Wir leben eine Kultur der Offenheit, des Respekts und des kollegialen Miteinanders.</p> <p>Chancengleichheit, fortschrittliche Rahmenbedingungen und die Vereinbarkeit von Beruf und Privatleben sind für uns selbstverständlich. Mit gezielter Förderung, zeitgemässen Arbeitsmodellen und einem Umfeld des Vertrauens unterstützen wir Ihre persönliche und berufliche Entwicklung. </p> <p> <a href=\"https://www.snb.ch/de/career/work-environment\">Erfahren Sie mehr über unser Arbeitsumfeld</a> <br /> <br />Es werden keine Bewerbungen von Agenturen entgegengenommen.<br /> <br /> </p> <h3> <strong>Ihr Kontakt</strong> </h3> <p>Sabrina Schmid<br />Recruiter<br /> <br /> <a data-application-email=\"R4a6PS1SyBPu9icmyqQgowAA90GQ5ZQSi21SjaGQX98%3D\" href=\"https://www.jobs.ch/external/email-application/R4a6PS1SyBPu9icmyqQgowAA90GQ5ZQSi21SjaGQX98%3D/e1051fdb-d899-4dd3-82b9-6a6c2dac5e57\" target=\"_blank\">E-Mail schreiben</a> <br /> <br /> </p> <p>Keine passende Stelle gefunden?<br />Jetzt <a href=\"https://careers.snb.ch/content/Job-Mail/?locale=de_DE\">Job-Mail</a> abonnieren</p> <p> </p> <p> </p> </div>",
+ "offer_id": 48,
+ "is_active": true,
+ "metadata": [],
+ "is_responsive": true,
+ "is_paid": true,
+ "headhunter_application_allowed": true,
+ "skills": [],
+ "images": [
+  {
+   "type": "png",
+   "context": "logo",
+   "url": "https://media.jobs.ch/images/b3161cb0-43e0-4bdf-a603-3c82664354dd/359x360.png",
+   "updated": "2026-10-19T18:05:02+02:00",
+   "file_name": "359x360.png"
+  },
+  {
+   "type": "png",
+   "context": "background",
+   "url": "https://media.jobs.ch/images/ffde9726-d2e9-4531-bee5-198f1d432eae/banner_image-1920x640.png",
+   "updated": "2026-10-19T18:05:02+02:00",
+   "file_name": "banner_image-1920x640.png"
+  }
+ ],
+ "benefits": [],
+ "layout_type": "STANDARD",
+ "locations": [],
+ "listing_tags": [],
+ "videos": [
+  {
+   "video_id": "GHgHKBt022I",
+   "type": "YOUTUBE",
+   "url": "https://youtu.be/GHgHKBt022I",
+   "thumbnail_url": "https://i.ytimg.com/vi/GHgHKBt022I/hqdefault.jpg",
+   "description": "Einblicke in die Arbeitsumgebung der SNB in Zürich und Bern",
+   "weight": 0,
+   "_type": "video"
+  }
+ ],
+ "template_job_url": "https://www.snb.ch/"
+}

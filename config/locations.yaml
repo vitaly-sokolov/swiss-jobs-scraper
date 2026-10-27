@@ -1,0 +1,63 @@
+# Location vocabulary for canton / country detection (§6.3, D5).
+# Names are matched accent- and case-insensitively as whole words; longer names
+# win. Two-letter canton codes in the text ("Freienbach SZ") are detected directly.
+
+cantons:
+  ZH: [Zürich, Zurich, Zurigo, Winterthur, Uster, Dübendorf, Dietikon, Wetzikon, Wädenswil, Horgen, Kloten,
+       Bülach, Opfikon, Glattbrugg, Wallisellen, Schlieren, Adliswil, Thalwil, Regensdorf, Volketswil, Illnau,
+       Effretikon, Meilen, Küsnacht, Stäfa, Rüti, Affoltern am Albis, Zollikon, Urdorf, Oerlikon, Altstetten,
+       Uhwiesen, Rümlang, Bassersdorf, Dielsdorf, Männedorf, Richterswil, Hinwil, Pfäffikon ZH, Zürich Flughafen]
+  BE: [Bern, Berne, Biel, Bienne, Biel/Bienne, Thun, Köniz, Burgdorf, Langenthal, Ostermundigen, Ittigen,
+       Muri bei Bern, Worb, Münsingen, Spiez, Interlaken, Lyss, Zollikofen, Moutier, Saint-Imier, Liebefeld]
+  LU: [Luzern, Lucerne, Emmen, Kriens, Horw, Ebikon, Sursee, Root, Littau, Rothenburg, Gisikon, Hochdorf, Willisau]
+  UR: [Altdorf UR, Altdorf, Andermatt, Erstfeld]
+  SZ: [Schwyz, Freienbach, Pfäffikon SZ, Einsiedeln, Küssnacht, Lachen, Wollerau, Altendorf, Arth, Goldau, Brunnen]
+  OW: [Sarnen, Kerns, Alpnach, Engelberg]
+  NW: [Stans, Hergiswil, Buochs, Stansstad]
+  GL: [Glarus, Näfels, Netstal]
+  ZG: [Zug, Baar, Cham, Rotkreuz, Risch, Steinhausen, Hünenberg, Unterägeri, Oberägeri, Walchwil, Menzingen]
+  FR: [Fribourg, Freiburg, Bulle, Villars-sur-Glâne, Marly, Murten, Morat, Düdingen, Givisiez, Granges-Paccot]
+  SO: [Solothurn, Soleure, Olten, Grenchen, Zuchwil, Derendingen, Biberist, Gerlafingen, Dornach, Egerkingen, Oensingen]
+  BS: [Basel, Bâle, Basilea, Riehen, Bettingen]
+  BL: [Liestal, Allschwil, Binningen, Muttenz, Pratteln, Reinach BL, Münchenstein, Birsfelden, Oberwil BL, Arlesheim, Aesch BL, Sissach]
+  SH: [Schaffhausen, Schaffhouse, Neuhausen am Rheinfall, Neuhausen, Stein am Rhein, Thayngen]
+  AR: [Herisau, Teufen, Appenzell Ausserrhoden, Heiden]
+  AI: [Appenzell]
+  SG: [St. Gallen, St.Gallen, Sankt Gallen, Saint-Gall, Rapperswil, Rapperswil-Jona, Jona, Wil, Gossau, Rorschach,
+       Buchs SG, Uzwil, Flawil, Altstätten, Sargans, Heerbrugg, Widnau, Grabs, Wattwil, Rheintal]
+  GR: [Chur, Coire, Davos, St. Moritz, Landquart, Domat/Ems, Ilanz, Bonaduz, Thusis, Poschiavo, Graubünden, Grisons]
+  AG: [Aarau, Baden, Wettingen, Wohlen, Brugg, Lenzburg, Zofingen, Rheinfelden, Oftringen, Spreitenbach, Dättwil,
+       Windisch, Neuenhof, Suhr, Buchs AG, Mägenwil, Muri AG, Bremgarten, Villmergen, Aargau]
+  TG: [Frauenfeld, Kreuzlingen, Arbon, Amriswil, Weinfelden, Romanshorn, Erlen, Bischofszell, Thurgau]
+  TI: [Lugano, Bellinzona, Locarno, Mendrisio, Chiasso, Manno, Giubiasco, Biasca, Ticino, Tessin, Stabio, Bioggio]
+  VD: [Lausanne, Yverdon, Yverdon-les-Bains, Montreux, Renens, Nyon, Vevey, Morges, Gland, Ecublens, Prilly, Pully,
+       Le Mont-sur-Lausanne, Crissier, Rolle, Aigle, Epalinges, Bussigny, Lutry, Écublens, Vaud, Etoy, Préverenges]
+  VS: [Sion, Sitten, Martigny, Monthey, Sierre, Siders, Brig, Visp, Naters, Valais, Wallis, Crans-Montana, Zermatt]
+  NE: [Neuchâtel, Neuenburg, La Chaux-de-Fonds, Le Locle, Marin-Epagnier, Peseux, Boudry, Colombier, Neuchatel]
+  GE: [Genève, Geneve, Geneva, Genf, Ginevra, Carouge, Meyrin, Vernier, Lancy, Grand-Lancy, Plan-les-Ouates,
+       Onex, Thônex, Chêne-Bourg, Satigny, Cologny, Versoix, Bellevue, Le Grand-Saconnex, Petit-Lancy]
+  JU: [Delémont, Porrentruy, Delemont, Jura]
+
+# Border-region towns (D5) by ISO country code. Jobs there are kept.
+border_towns:
+  DE: [Lörrach, Weil am Rhein, Konstanz, Singen, Waldshut, Waldshut-Tiengen, Bad Säckingen, Rheinfelden (Baden),
+       Grenzach-Wyhlen, Freiburg im Breisgau, Friedrichshafen, Radolfzell, Jestetten, Lindau]
+  FR: [Annemasse, Saint-Julien-en-Genevois, Ferney-Voltaire, Saint-Genis-Pouilly, Gex, Thonon-les-Bains,
+       Annecy, Saint-Louis, Huningue, Mulhouse, Pontarlier, Morteau, Divonne-les-Bains, Évian-les-Bains]
+  IT: [Como, Varese, Chiasso Italia, Domodossola, Campione d'Italia, Lugano Italia, Ponte Tresa]
+  AT: [Bregenz, Dornbirn, Feldkirch, Lustenau, Hohenems]
+  LI: [Vaduz, Schaan, Balzers, Triesen, Eschen, Ruggell, Liechtenstein]
+
+# Postcode ranges where the canton is unambiguous; used when no name matched.
+postcode_ranges:
+  GE: [[1200, 1299]]
+  VD: [[1000, 1018]]
+  NE: [[2000, 2099]]
+  BE: [[3000, 3030]]
+  BS: [[4000, 4059]]
+  LU: [[6000, 6015]]
+  ZG: [[6300, 6319]]
+  TI: [[6500, 6999]]
+  GR: [[7000, 7099]]
+  ZH: [[8000, 8099]]
+  SG: [[9000, 9016]]

@@ -1,0 +1,32 @@
+# Copy to config/config.yaml (gitignored), fill in, chmod 600 (§11.2).
+# Never commit real values.
+database_url: "postgresql+psycopg://jobs:CHANGE_ME@postgres:5432/jobs"
+contact_email: "you@example.com"   # goes into the User-Agent (§14)
+
+proxy:
+  enabled: false                   # Q1: set true once host/port are known
+  url: "http://PROXY_HOST:PROXY_PORT"   # HTTP proxy (D14)
+  username: "PROXY_USER"
+  password: "PROXY_PASSWORD"
+  # Chrome uses the credential-free forwarding proxy container (§5.1).
+  browser_url: "http://egress:3128"
+
+telegram:
+  bot_token: "BOT_TOKEN"
+  chat_id: "PRIVATE_CHAT_ID"       # one private chat for jobs and alerts (D15)
+  seconds_between_messages: 1.0
+  use_proxy: false
+
+api_keys:
+  foorilla: ""                     # PRO+ API key; also enable foorilla in sources.yaml
+
+throttle:
+  default_seconds_per_request: 2
+
+timeouts:
+  per_source_minutes: 15
+  global_minutes: 60
+
+retention:
+  raw_days: 90
+  inactive_days: 365

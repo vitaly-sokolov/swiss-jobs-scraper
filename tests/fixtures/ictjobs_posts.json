@@ -1,0 +1,32 @@
+[
+ {
+  "id": 199935,
+  "date_gmt": "2026-10-19T15:21:00",
+  "modified_gmt": "2026-10-19T15:22:47",
+  "link": "https://ictjobs.ch/software-entwicklung/oracle-pl-sql-developer-f-m-x/",
+  "title": {
+   "rendered": "Oracle PL/SQL Developer (f/m/x)"
+  },
+  "ctx_employment_type": [
+   3143
+  ],
+  "ctx_work_location": [
+   3250
+  ]
+ },
+ {
+  "id": 199931,
+  "date_gmt": "2026-10-19T15:14:00",
+  "modified_gmt": "2026-10-19T15:24:01",
+  "link": "https://ictjobs.ch/beratung-consultants/it-business-analyst-credit-f-m-x/",
+  "title": {
+   "rendered": "IT Business Analyst – Credit (f/m/x)"
+  },
+  "ctx_employment_type": [
+   3143
+  ],
+  "ctx_work_location": [
+   3250
+  ]
+ }
+]

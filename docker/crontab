@@ -1,0 +1,5 @@
+# Daily at 07:00 Swiss time (TZ=Europe/Zurich in the image; same offset as
+# Europe/Paris from the design). Scrape, notify, then apply retention.
+# jobs-scrape exits 0 when individual sources fail (they raise ⚠️ alerts), so
+# notifications still go out for the sources that worked.
+0 7 * * * jobs-scrape --all && jobs-notify; jobs-cleanup

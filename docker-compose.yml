@@ -1,0 +1,54 @@
+# VPS deployment (D10, §10).
+#   cp config/config.example.yaml config/config.yaml
+#   sudo chown 10001 config/config.yaml && sudo chmod 600 config/config.yaml   # container user uid 10001
+#   echo "POSTGRES_PASSWORD=..." > .env && chmod 600 .env   # same password as database_url
+#   docker compose up -d --build
+# The egress proxy only matters for Selenium, which no current adapter uses:
+#   docker compose --profile selenium up -d
+
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: jobs
+      POSTGRES_USER: jobs
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks: [backend]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jobs -d jobs"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  scheduler:
+    build: .
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./config:/app/config:ro
+    environment:
+      TZ: Europe/Zurich
+    networks: [backend, default]
+    shm_size: "512m"   # Chromium
+    restart: unless-stopped
+
+  egress:
+    profiles: [selenium]
+    build: ./docker/egress
+    env_file:
+      - path: ./config/egress.env
+        required: false
+    networks: [backend, default]
+    restart: unless-stopped
+
+networks:
+  backend:
+    internal: true
+  default: {}
+
+volumes:
+  pgdata:

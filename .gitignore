@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# real config with secrets (D12, §11.2)
+config/config.yaml
+
+# deployment secrets
+.env
+config/egress.env
+
+.zed/

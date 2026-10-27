@@ -1,0 +1,39 @@
+# Per-source settings (D13). Findings behind each entry: docs/sources/<name>.md
+# seconds_per_request overrides throttle.default_seconds_per_request for that host.
+sources:
+  swissdevjobs:
+    enabled: true
+    options:
+      meta_categories: [softwareeng, mlaidata, architectconsulting, clouddevops]
+
+  jobs_ch:
+    enabled: true
+    # ~70 list pages + one detail call per new matching job; 2 s would exceed the
+    # 15 min per-source timeout on the first run.
+    seconds_per_request: 1.0
+    options:
+      category_ids: [106]   # information-technology-telecom
+
+  jobup:
+    enabled: true
+    seconds_per_request: 1.0
+    options:
+      category_ids: [702]   # it-telecommunications
+
+  ictjobs:
+    enabled: true
+    options:
+      prof_groups: [3159, 3672]   # software/data/web, AI/ML
+
+  ictcareer:
+    enabled: true
+    options:
+      tags: [538, 533, 540]       # software engineering, databases, web programming
+
+  foorilla:
+    # The API needs a PRO+ key (api_keys.foorilla in config.yaml). Enable once set.
+    enabled: false
+    seconds_per_request: 0.5
+    options:
+      published_within_days: 60
+      exclude_agencies: false     # open question Q3

@@ -1,0 +1,232 @@
+{
+ "start": 0,
+ "rows": 2,
+ "num_pages": 1,
+ "current_page": 1,
+ "documents": [
+  {
+   "_links": {
+    "detail_de": {
+     "href": "https://www.jobs.ch/de/stellenangebote/detail/e1051fdb-d899-4dd3-82b9-6a6c2dac5e57/",
+     "templated": false,
+     "methods": [
+      "GET"
+     ]
+    },
+    "detail_fr": {
+     "href": "https://www.jobs.ch/fr/offres-emplois/detail/e1051fdb-d899-4dd3-82b9-6a6c2dac5e57/",
+     "templated": false,
+     "methods": [
+      "GET"
+     ]
+    },
+    "detail_en": {
+     "href": "https://www.jobs.ch/en/vacancies/detail/e1051fdb-d899-4dd3-82b9-6a6c2dac5e57/",
+     "templated": false,
+     "methods": [
+      "GET"
+     ]
+    }
+   },
+   "categories": [
+    {
+     "lvl_0": 106,
+     "path": "/98/106/171",
+     "lvl_1": 171
+    },
+    {
+     "lvl_0": 106,
+     "path": "/98/106/179",
+     "lvl_1": 179
+    }
+   ],
+   "company_visible": true,
+   "age": 0,
+   "regions": [
+    {
+     "lvl_0": 2,
+     "lvl_1": 7,
+     "lvl_2": 19,
+     "path": "/2/7/19"
+    }
+   ],
+   "slug": "e1051fdb-d899-4dd3-82b9-6a6c2dac5e57-data-platform-engineer",
+   "company_slug": "2004-schweizerische-nationalbank",
+   "tags": [
+    {
+     "type": "employment_grade",
+     "value_min": 80,
+     "value_max": 100
+    }
+   ],
+   "job_id": "e1051fdb-d899-4dd3-82b9-6a6c2dac5e57",
+   "datapool_id": "e1051fdb-d899-4dd3-82b9-6a6c2dac5e57",
+   "title": "Data Platform Engineer",
+   "preview": "Gemeinsam setzen wir uns für die Erfüllung unseres einzigartigen Mandats ein. Ein sinnvoller Job in einem vielfältigen Umfeld. \nData Platform ...",
+   "company_name": "Schweizerische Nationalbank",
+   "company_id": "2004",
+   "education_ids": [],
+   "language_skills": [],
+   "work_experience": [],
+   "publication_date": "2026-10-19T18:02:04+02:00",
+   "initial_publication_date": "2026-10-19T18:03:37+02:00",
+   "place": "Zürich",
+   "company_logo_file": "https://media.jobs.ch/images/b3161cb0-43e0-4bdf-a603-3c82664354dd/359x360.png",
+   "company_segmentation": "gu",
+   "employment_position_ids": [
+    3
+   ],
+   "employment_grades": [
+    80,
+    85,
+    90,
+    95,
+    100
+   ],
+   "employment_type_ids": [
+    "5"
+   ],
+   "benefit_ids": [],
+   "offer_id": 48,
+   "is_active": true,
+   "metadata": [],
+   "is_paid": true,
+   "images": [
+    {
+     "type": "png",
+     "context": "logo",
+     "url": "https://media.jobs.ch/images/b3161cb0-43e0-4bdf-a603-3c82664354dd/359x360.png",
+     "updated": "2026-10-19T18:05:02+02:00",
+     "file_name": "359x360.png"
+    },
+    {
+     "type": "png",
+     "context": "background",
+     "url": "https://media.jobs.ch/images/ffde9726-d2e9-4531-bee5-198f1d432eae/banner_image-1920x640.png",
+     "updated": "2026-10-19T18:05:02+02:00",
+     "file_name": "banner_image-1920x640.png"
+    }
+   ],
+   "layout_type": "STANDARD"
+  },
+  {
+   "_links": {
+    "detail_de": {
+     "href": "https://www.jobs.ch/de/stellenangebote/detail/c5a0c81b-953e-45f8-bfb5-a4bfd5ea382b/",
+     "templated": false,
+     "methods": [
+      "GET"
+     ]
+    },
+    "detail_fr": {
+     "href": "https://www.jobs.ch/fr/offres-emplois/detail/c5a0c81b-953e-45f8-bfb5-a4bfd5ea382b/",
+     "templated": false,
+     "methods": [
+      "GET"
+     ]
+    },
+    "detail_en": {
+     "href": "https://www.jobs.ch/en/vacancies/detail/c5a0c81b-953e-45f8-bfb5-a4bfd5ea382b/",
+     "templated": false,
+     "methods": [
+      "GET"
+     ]
+    }
+   },
+   "categories": [
+    {
+     "lvl_0": 106,
+     "path": "/98/106/175",
+     "lvl_1": 175
+    }
+   ],
+   "company_visible": true,
+   "age": 0,
+   "regions": [
+    {
+     "lvl_0": 2,
+     "lvl_1": 15,
+     "lvl_2": 0,
+     "path": "/2/15"
+    }
+   ],
+   "slug": "c5a0c81b-953e-45f8-bfb5-a4bfd5ea382b-cloud-engineer-m-w-80-100",
+   "company_slug": "3f5628a2-2317-4a04-949c-fabc172a30c5-yellowshark",
+   "tags": [
+    {
+     "type": "employment_grade",
+     "value_min": 80,
+     "value_max": 100
+    }
+   ],
+   "job_id": "c5a0c81b-953e-45f8-bfb5-a4bfd5ea382b",
+   "datapool_id": "c5a0c81b-953e-45f8-bfb5-a4bfd5ea382b",
+   "title": "Cloud Engineer (m/w, 80-100%)",
+   "preview": "Interessieren Sie sich für die IT und sind sicher im Umgang mit Microsoft IT Infrastruktur? Sehen Sie Ihre Zukunft im Bereich Cloud Engineering? ...",
+   "company_name": "yellowshark",
+   "company_id": "3f5628a2-2317-4a04-949c-fabc172a30c5",
+   "education_ids": [],
+   "language_skills": [],
+   "work_experience": [],
+   "publication_date": "2026-10-19T14:02:24+02:00",
+   "initial_publication_date": "2026-10-19T14:02:24+02:00",
+   "place": "Hünenberg",
+   "company_logo_file": "https://media.jobs.ch/images/3a6e58a3-f8e0-448f-9e11-0db2d1e2c4b8/Yellowshark_Logo_Schwarz_big_1_-300x150.png",
+   "company_segmentation": "pdl",
+   "employment_position_ids": [
+    3
+   ],
+   "employment_grades": [
+    80,
+    85,
+    90,
+    95,
+    100
+   ],
+   "employment_type_ids": [
+    "5"
+   ],
+   "benefit_ids": [],
+   "offer_id": 36,
+   "is_active": true,
+   "metadata": [],
+   "coordinates": {
+    "lat": 47.19358185776911,
+    "lon": 8.416626986931691
+   },
+   "is_paid": true,
+   "salary": {
+    "currency": "CHF",
+    "unit": "YEAR",
+    "range": {
+     "gte": 95000.0,
+     "lte": 110000.0
+    }
+   },
+   "salary_from": 95000.0,
+   "salary_to": 110000.0,
+   "images": [
+    {
+     "type": "png",
+     "context": "background",
+     "url": "https://media.jobs.ch/images/38759775-c0d2-45e6-8d95-515ce721a367/banner_image-1200x400.png",
+     "updated": "2026-10-19T19:32:12+02:00",
+     "file_name": "banner_image-1200x400.png"
+    },
+    {
+     "type": "png",
+     "context": "logo",
+     "url": "https://media.jobs.ch/images/3a6e58a3-f8e0-448f-9e11-0db2d1e2c4b8/Yellowshark_Logo_Schwarz_big_1_-300x150.png",
+     "updated": "2026-10-19T19:32:12+02:00",
+     "file_name": "Yellowshark_Logo_Schwarz_big_1_-300x150.png"
+    }
+   ],
+   "layout_type": "STANDARD"
+  }
+ ],
+ "total_hits": 468,
+ "hash": "1e4e91e526511b28e02b8247a2f76586",
+ "metadata": {
+  "search_geo_shapes": []
+ }
+}
