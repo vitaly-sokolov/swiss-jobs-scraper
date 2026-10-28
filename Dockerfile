@@ -6,7 +6,7 @@ ARG TARGETARCH
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    PIP_NO_CACHE_DIR=1 \
+    UV_NO_CACHE=1 \
     TZ=Europe/Zurich \
     JOBS_CONFIG_DIR=/app/config \
     JOBS_ALEMBIC_INI=/app/alembic.ini \
@@ -21,10 +21,19 @@ RUN apt-get update \
        "https://github.com/aptible/supercronic/releases/download/${SUPERCRONIC_VERSION}/supercronic-linux-${arch}" \
     && chmod +x /usr/local/bin/supercronic
 
+COPY --from=ghcr.io/astral-sh/uv:0.12.18 /uv /bin/uv
+ENV UV_COMPILE_BYTECODE=1 \
+    UV_LINK_MODE=copy \
+    UV_PYTHON_DOWNLOADS=never \
+    PATH="/app/.venv/bin:$PATH"
+
 WORKDIR /app
-COPY pyproject.toml ./
+# Dependencies first: this layer is cached until pyproject.toml/uv.lock change.
+COPY pyproject.toml uv.lock ./
+RUN uv sync --locked --no-dev --no-install-project
+
 COPY src ./src
-RUN pip install .
+RUN uv sync --locked --no-dev --no-editable
 
 COPY alembic.ini ./
 COPY migrations ./migrations
