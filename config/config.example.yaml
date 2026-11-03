@@ -15,6 +15,7 @@ telegram:
   bot_token: "BOT_TOKEN"
   chat_id: "PRIVATE_CHAT_ID"       # one private chat for jobs and alerts (D15)
   seconds_between_messages: 1.0
+  tags: []                         # e.g. [python, rust]: only jobs with any of these tags; [] = all
   use_proxy: false
 
 api_keys:

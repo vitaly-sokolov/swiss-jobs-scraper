@@ -68,6 +68,8 @@ class TelegramConfig(BaseModel):
     # One private chat for both job messages and ⚠️ alerts (D15).
     chat_id: str | None = None
     seconds_between_messages: float = 1.0
+    # Canonical tags from tech_tags.yaml; only jobs with at least one are sent. Empty sends all.
+    tags: list[str] = Field(default_factory=list)
     use_proxy: bool = False
     api_base: str = "https://api.telegram.org"
 

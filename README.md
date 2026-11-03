@@ -22,6 +22,8 @@ All four take a PostgreSQL advisory lock, so overlapping runs exit with code 2.
 - `config/config.yaml` (gitignored; copy from `config.example.yaml`) holds the database URL,
   proxy, Telegram token and chat ID, API keys, timeouts and retention.
 - `config/sources.yaml` holds per-source enable flags, throttle and category IDs.
+- `telegram.tags` in `config.yaml` limits notifications to jobs with at least one of the listed
+  tags (canonical names from `tech_tags.yaml`); empty means all jobs.
 - `config/tech_keywords.yaml` is the filter, `tech_tags.yaml` the tag vocabulary,
   `locations.yaml` the canton and border-town vocabulary.
 - Env overrides: `JOBS_<FIELD>`, nested with `__`, e.g. `JOBS_TELEGRAM__CHAT_ID=123`.

@@ -140,12 +140,16 @@ def recent_statuses(session: Session, source: str, limit: int) -> list[str]:
     )
 
 
-def pending_notifications(session: Session, limit: int | None = None) -> Sequence[Job]:
+def pending_notifications(
+    session: Session, limit: int | None = None, tags: Sequence[str] = ()
+) -> Sequence[Job]:
     stmt = (
         select(Job)
         .where(Job.notified_at.is_(None), Job.is_active.is_(True), Job.pending_event.is_not(None))
         .order_by(Job.first_seen_at, Job.id)
     )
+    if tags:
+        stmt = stmt.where(Job.tech_tags.overlap(list(tags)))
     if limit:
         stmt = stmt.limit(limit)
     return session.scalars(stmt).all()

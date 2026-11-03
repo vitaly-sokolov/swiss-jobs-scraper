@@ -147,6 +147,7 @@ class Notifier:
             raise RuntimeError("telegram.bot_token and telegram.chat_id must be set in config.yaml")
         self.chat_id = tg.chat_id
         self.interval = tg.seconds_between_messages
+        self.tags = [t.lower() for t in tg.tags]
         self.session_factory = session_factory
         self.client = client or TelegramClient(
             tg.bot_token.get_secret_value(),
@@ -165,7 +166,7 @@ class Notifier:
     def notify_pending(self, limit: int | None = None) -> tuple[int, int]:
         sent = failed = 0
         with self.session_factory() as session:
-            ids = [job.id for job in repo.pending_notifications(session, limit)]
+            ids = [job.id for job in repo.pending_notifications(session, limit, self.tags)]
         for index, job_id in enumerate(ids):
             if index:
                 self._sleep(self.interval)
