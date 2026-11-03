@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import re
 import time
 from collections.abc import Callable
 from dataclasses import dataclass
@@ -32,6 +33,9 @@ SOURCE_LABELS = {
 }
 REMOTE_LABELS = {"onsite": "on-site", "hybrid": "hybrid", "remote": "remote"}
 PERIOD_LABELS = {"year": "year", "month": "month", "day": "day", "hour": "hour"}
+# Telegram hashtags allow only letters, digits and "_"; these tags would lose meaning if just stripped.
+HASHTAG_ALIASES = {"c#": "csharp", "c++": "cpp", ".net": "dotnet", "node.js": "nodejs"}
+_NON_WORD = re.compile(r"\W+")
 
 
 def escape(text: str, quote: bool = False) -> str:
@@ -97,6 +101,10 @@ class TelegramClient:
         return SendResult(False, error=error)
 
 
+def hashtag(tag: str) -> str:
+    return "#" + (HASHTAG_ALIASES.get(tag) or _NON_WORD.sub("_", tag).strip("_"))
+
+
 def _money(value: Decimal) -> str:
     return f"{int(value):,}".replace(",", "'") if value == value.to_integral() else f"{value:,.2f}".replace(",", "'")
 
@@ -123,7 +131,7 @@ def format_message(job: Job, also_on: list[str]) -> str:
     if salary := format_salary(job):
         lines.append(f"💰 {escape(salary)}")
     if job.tech_tags:
-        lines.append("🏷 " + ", ".join(escape(t) for t in job.tech_tags[:MAX_TAGS]))
+        lines.append("🏷 " + " ".join(escape(hashtag(t)) for t in job.tech_tags[:MAX_TAGS]))
     source = SOURCE_LABELS.get(job.source, job.source)
     footer = f"🔗 <a href=\"{escape(job.url, quote=True)}\">{escape(source)}</a>"
     if also_on:

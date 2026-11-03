@@ -8,7 +8,7 @@ import pytest
 from sqlalchemy import select
 
 from jobscraper.db.models import Job, Notification, Source
-from jobscraper.notify.telegram import Notifier, TelegramClient, format_message
+from jobscraper.notify.telegram import Notifier, TelegramClient, format_message, hashtag
 
 URL = "https://api.telegram.org/botTEST/sendMessage"
 
@@ -30,8 +30,13 @@ def test_format_new_message():
     assert text.startswith("🆕 <b>Senior Backend Engineer &lt;Python&gt;</b>")
     assert "Acme &amp; Co · 📍 ZH · 🏠 hybrid" in text
     assert "💰 CHF 120'000–140'000 / year" in text
-    assert "🏷 python, fastapi, postgresql" in text
+    assert "🏷 #python #fastapi #postgresql" in text
     assert '<a href="https://www.jobs.ch/en/vacancies/detail/x/">jobs.ch</a> · also on ictcareer.ch' in text
+
+
+def test_hashtags_are_telegram_safe():
+    tags = ["c#", "c++", ".net", "node.js", "scikit-learn", "computer-vision"]
+    assert [hashtag(t) for t in tags] == ["#csharp", "#cpp", "#dotnet", "#nodejs", "#scikit_learn", "#computer_vision"]
 
 
 def test_format_reopened_without_salary():
@@ -97,6 +102,24 @@ def test_notify_pending_success_and_failure(settings, seeded):
         assert by_id["2"].notified_at is None and by_id["2"].pending_event == "new"  # retried next run
         rows = s.scalars(select(Notification).order_by(Notification.id)).all()
         assert [(r.status, r.event, r.message_id) for r in rows] == [("sent", "new", 10), ("failed", "new", None)]
+
+
+def test_notify_pending_filters_by_tags(settings, session_factory):
+    with session_factory() as s:
+        s.add(Source(name="jobs_ch", base_url="https://www.jobs.ch", fetch_method="api"))
+        for i, tags in enumerate([["python", "django"], ["java"], []], start=1):
+            s.add(Job(source="jobs_ch", source_job_id=str(i), url=f"https://e.org/{i}", title=f"Job {i}",
+                      dedupe_key=str(i), pending_event="new", tech_tags=tags))
+        s.commit()
+    handler, calls = responder([httpx.Response(200, json={"ok": True, "result": {"message_id": 1}})])
+    client = TelegramClient("TEST", sleep=lambda _: None, transport=httpx.MockTransport(handler))
+    settings.telegram.tags = ["Python", "rust"]
+    assert Notifier(settings, session_factory, client, sleep=lambda _: None).notify_pending() == (1, 0)
+    assert len(calls) == 1
+
+    with session_factory() as s:
+        pending = {j.source_job_id for j in s.scalars(select(Job).where(Job.notified_at.is_(None)))}
+        assert pending == {"2", "3"}  # non-matching jobs stay pending
 
 
 def test_notifier_requires_config(settings, session_factory):
