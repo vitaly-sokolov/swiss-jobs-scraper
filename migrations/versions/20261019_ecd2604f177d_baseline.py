@@ -1,7 +1,7 @@
 """baseline
 
 Revision ID: ecd2604f177d
-Revises: 
+Revises:
 Create Date: 2026-10-19 20:23:51.498784
 """
 from collections.abc import Sequence

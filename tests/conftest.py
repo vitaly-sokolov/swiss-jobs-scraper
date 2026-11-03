@@ -33,7 +33,7 @@ def settings() -> Settings:
     return Settings(
         database_url="postgresql+psycopg://unused/unused",
         contact_email="test@example.com",
-        telegram={"bot_token": "TEST", "chat_id": "42", "seconds_between_messages": 0},
+        telegram={"bot_token": "TEST", "chat_id": "42", "seconds_between_messages": 0, "tags": []},
         throttle={"default_seconds_per_request": 0},
     )
 

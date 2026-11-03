@@ -8,10 +8,10 @@ import os
 import sys
 from pathlib import Path
 
-from jobscraper.config import Settings, Vocab, load_settings
 from sqlalchemy import inspect
 from sqlalchemy.exc import OperationalError
 
+from jobscraper.config import Settings, Vocab, load_settings
 from jobscraper.db.session import LockHeld, make_engine, make_session_factory, single_instance
 from jobscraper.logging_setup import setup_logging
 
