@@ -32,6 +32,7 @@ SOURCE_LABELS = {
     "foorilla": "foorilla",
 }
 REMOTE_LABELS = {"onsite": "on-site", "hybrid": "hybrid", "remote": "remote"}
+LANGUAGES = ("de", "fr", "en")
 PERIOD_LABELS = {"year": "year", "month": "month", "day": "day", "hour": "hour"}
 # Telegram hashtags allow only letters, digits and "_"; these tags would lose meaning if just stripped.
 HASHTAG_ALIASES = {"c#": "csharp", "c++": "cpp", ".net": "dotnet", "node.js": "nodejs"}
@@ -120,13 +121,25 @@ def format_salary(job: Job) -> str | None:
     return job.salary_text or None
 
 
+def format_where(job: Job) -> str | None:
+    """City as published, plus the canton when the text does not already name it."""
+    city = (job.location_text or "").strip()
+    if not city:
+        return job.canton or job.country
+    if job.canton and not re.search(rf"\b{job.canton}\b", city):
+        return f"{city} ({job.canton})"
+    return city
+
+
 def format_message(job: Job, also_on: list[str]) -> str:
     head = "🆕" if job.pending_event != "reopened" else "🔁 reopened"
     lines = [f"{head} <b>{escape(job.title)}</b>"]
-    where = job.canton or job.location_text or job.country
+    where = format_where(job)
     meta = [escape(job.company) if job.company else None, f"📍 {escape(where)}" if where else None]
     if remote := REMOTE_LABELS.get(job.remote):
         meta.append(f"🏠 {remote}")
+    if job.language in LANGUAGES:
+        meta.append(f"🗣 #{job.language}")
     lines.append(" · ".join(m for m in meta if m))
     if salary := format_salary(job):
         lines.append(f"💰 {escape(salary)}")

@@ -19,7 +19,7 @@ def make_job(**kw) -> Job:
         title="Senior Backend Engineer <Python>", company="Acme & Co", location_text="Zürich", canton="ZH",
         country="CH", remote="hybrid", salary_min=Decimal("120000.00"), salary_max=Decimal("140000.00"),
         salary_currency="CHF", salary_period="year", salary_text="CHF 120k-140k",
-        tech_tags=["python", "fastapi", "postgresql"], pending_event="new",
+        tech_tags=["python", "fastapi", "postgresql"], language="de", pending_event="new",
     )
     defaults.update(kw)
     return Job(**defaults)
@@ -28,10 +28,17 @@ def make_job(**kw) -> Job:
 def test_format_new_message():
     text = format_message(make_job(), also_on=["ictcareer"])
     assert text.startswith("🆕 <b>Senior Backend Engineer &lt;Python&gt;</b>")
-    assert "Acme &amp; Co · 📍 ZH · 🏠 hybrid" in text
+    assert "Acme &amp; Co · 📍 Zürich (ZH) · 🏠 hybrid · 🗣 #de" in text
     assert "💰 CHF 120'000–140'000 / year" in text
     assert "🏷 #python #fastapi #postgresql" in text
     assert '<a href="https://www.jobs.ch/en/vacancies/detail/x/">jobs.ch</a> · also on ictcareer.ch' in text
+
+
+def test_format_location_and_language():
+    assert "📍 8001 Zürich, ZH ·" in format_message(make_job(location_text="8001 Zürich, ZH"), [])
+    assert "📍 ZH ·" in format_message(make_job(location_text=None), [])
+    text = format_message(make_job(language="other"), [])
+    assert "🗣" not in text
 
 
 def test_hashtags_are_telegram_safe():
