@@ -49,6 +49,9 @@ One-time setup on the server (checkout in `/srv/swiss-jobs-scraper`, owned by us
 in the `docker` group; otherwise edit `User=` and the paths in the `.service` file):
 
 ```sh
+sudo useradd --system --create-home --shell /usr/sbin/nologin --groups docker deploy
+sudo chown -R deploy:deploy /srv/swiss-jobs-scraper
+sudo chown 10001 /srv/swiss-jobs-scraper/config/config.yaml   # keep it readable by the container user
 sudo cp deploy/swiss-jobs-deploy.service deploy/swiss-jobs-deploy.timer /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl start swiss-jobs-deploy.service      # one run now; check it succeeds
@@ -59,6 +62,8 @@ sudo systemctl enable --now swiss-jobs-deploy.timer
 - **Roll back:** `echo "IMAGE_TAG=<short-sha>" >> .env`; the next tick deploys it. Remove the
   line to follow `latest` again.
 - **Pause deploys:** `sudo systemctl stop swiss-jobs-deploy.timer`
+- **Manual git or compose commands** in the checkout: run them as `deploy`, e.g.
+  `sudo -u deploy git status`, `sudo -u deploy docker compose ps`.
 - A failed run (e.g. local commits on the server, so the fast-forward is refused) leaves the
   running containers as they are and shows up as a failed unit in `systemctl --failed`.
 
