@@ -8,5 +8,5 @@ Requires=docker.service
 Type=oneshot
 # Owner of the checkout, member of the docker group.
 User=deploy
-ExecStart=/srv/swiss-job-scraper/deploy/deploy.sh
+ExecStart=/srv/swiss-jobs-scraper/deploy/deploy.sh
 TimeoutStartSec=15min

@@ -45,7 +45,7 @@ fast-forwards the checkout, pulls the image and runs `docker compose up -d`. Not
 when nothing new is on GitHub or GHCR, and it skips the tick while a scrape is running. The repo
 and image are public, so the server needs no GitHub credentials.
 
-One-time setup on the server (checkout in `/srv/swiss-job-scraper`, owned by user `deploy`
+One-time setup on the server (checkout in `/srv/swiss-jobs-scraper`, owned by user `deploy`
 in the `docker` group; otherwise edit `User=` and the paths in the `.service` file):
 
 ```sh
