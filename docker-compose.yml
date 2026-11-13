@@ -3,6 +3,7 @@
 #   sudo chown 10001 config/config.yaml && sudo chmod 600 config/config.yaml   # container user uid 10001
 #   echo "POSTGRES_PASSWORD=..." > .env && chmod 600 .env   # same password as database_url
 #   docker compose pull && docker compose up -d   # image is built by CI and pushed to GHCR
+# After that, swiss-jobs-deploy.timer (deploy/, see README) deploys new commits automatically.
 # Roll back by pinning a commit: echo "IMAGE_TAG=<short-sha>" >> .env, then pull + up -d again.
 # Local build instead of pulling: docker compose up -d --build
 # The egress proxy only matters for Selenium, which no current adapter uses:

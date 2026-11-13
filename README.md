@@ -37,6 +37,31 @@ TEST_DATABASE_URL=postgresql+psycopg://postgres@localhost:5432/jobs_test pytest
 pytest -m live -s            # smoke test against the real sites (network)
 ```
 
+## Deployment
+
+CI pushes `ghcr.io/vitaly-sokolov/swiss-jobs-scraper` (`latest` and the short SHA) after the
+tests pass on `main`. On the server, a systemd timer runs `deploy/deploy.sh` every 5 minutes: it
+fast-forwards the checkout, pulls the image and runs `docker compose up -d`. Nothing changes
+when nothing new is on GitHub or GHCR, and it skips the tick while a scrape is running. The repo
+and image are public, so the server needs no GitHub credentials.
+
+One-time setup on the server (checkout in `/srv/swiss-job-scraper`, owned by user `deploy`
+in the `docker` group; otherwise edit `User=` and the paths in the `.service` file):
+
+```sh
+sudo cp deploy/swiss-jobs-deploy.service deploy/swiss-jobs-deploy.timer /etc/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl start swiss-jobs-deploy.service      # one run now; check it succeeds
+sudo systemctl enable --now swiss-jobs-deploy.timer
+```
+
+- **Logs:** `journalctl -u swiss-jobs-deploy -n 50`; next run: `systemctl list-timers swiss-jobs-deploy`
+- **Roll back:** `echo "IMAGE_TAG=<short-sha>" >> .env`; the next tick deploys it. Remove the
+  line to follow `latest` again.
+- **Pause deploys:** `sudo systemctl stop swiss-jobs-deploy.timer`
+- A failed run (e.g. local commits on the server, so the fast-forward is refused) leaves the
+  running containers as they are and shows up as a failed unit in `systemctl --failed`.
+
 ### Runbook
 
 - **Run now:** `docker compose exec scheduler sh -c 'jobs-scrape --all && jobs-notify'`

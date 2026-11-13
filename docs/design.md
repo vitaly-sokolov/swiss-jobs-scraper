@@ -124,6 +124,10 @@ httpx request logging is muted because the Telegram URL contains the bot token.
 supercronic), `egress` (profile `selenium`). Config is mounted read-only; the container
 runs as uid 10001. No backups (D17).
 
+CI tests every push and PR; on `main` it pushes the image to GHCR (`latest`, short SHA). The
+server pulls: `swiss-jobs-deploy.timer` runs `deploy/deploy.sh` every 5 minutes (fast-forward
+the checkout, `compose pull`, `up -d`), skipping ticks while a scheduler job is running.
+
 ## 16. Open questions
 
 1. **Proxy endpoint (Q1)**: host and port are still needed. Until then `proxy.enabled: false`.

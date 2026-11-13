@@ -1,0 +1,12 @@
+[Unit]
+Description=Deploy swiss-jobs-scraper from GitHub and GHCR
+Wants=network-online.target
+After=network-online.target docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+# Owner of the checkout, member of the docker group.
+User=deploy
+ExecStart=/srv/swiss-job-scraper/deploy/deploy.sh
+TimeoutStartSec=15min
